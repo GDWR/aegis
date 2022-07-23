@@ -14,6 +14,12 @@ go build
 
 ### Run with docker
 
+#### From container registry
+```shell
+docker run -p 8765:8765 -p 25565:25565 -p 8080:8080 ghcr.io/gdwr/aegis:main --destination=127.0.0.1
+```
+
+#### Build from source
 ```shell
 docker build . -t aegis
 docker run -p 8765:8765 -p 25565:25565 -p 8080:8080 aegis --destination=127.0.0.1
